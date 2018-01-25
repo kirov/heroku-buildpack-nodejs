@@ -35,10 +35,10 @@ install_nodejs() {
   #  fail_bin_install node $version;
   #fi
   
-  local url=http://files.evgkirov.com/node-v8.9.4-linux-x64.tar.gz
+  #local url=http://files.evgkirov.com/node-v8.9.4-linux-x64.tar.gz
 
   echo "Downloading and installing node $number..."
-  local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/node.tar.gz --write-out "%{http_code}")
+  local code=$(curl "http://files.evgkirov.com/node-v8.9.4-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/node.tar.gz --write-out "%{http_code}")
   if [ "$code" != "200" ]; then
     echo "Unable to download node: $code" && false
   fi
