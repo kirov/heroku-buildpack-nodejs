@@ -44,7 +44,7 @@ install_nodejs() {
   fi
   tar xzf /tmp/node.tar.gz -C /tmp
   rm -rf $dir/*
-  mv /tmp/node-v$number-$os-$cpu/* $dir
+  mv /tmp/node-v8.9.4-linux-x64/* $dir
   chmod +x $dir/bin/*
 }
 
